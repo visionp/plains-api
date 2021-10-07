@@ -4,7 +4,9 @@ docker network create plains_network
 
 docker-compose up -d
 
-docker-compose exec plains-php bash -c "composer install"
+docker-compose exec plains-php bash -c "composer update"
+
+docker-compose exec plains-php bash -c "composer init-project"
 
 composer install
 
