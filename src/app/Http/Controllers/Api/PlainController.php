@@ -7,7 +7,7 @@ use App\Library\PlainHangarFactory;
 class PlainController extends Controller
 {
 
-    public function list()
+    public function list(): array
     {
         return PlainHangarFactory::getHangar()->getCountPlains();
     }
