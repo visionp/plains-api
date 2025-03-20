@@ -26,6 +26,6 @@ class PlainControllerTest extends TestCase
         $response = $this->getJson('/api/v1/plain', ['accept' => 'application/json']);
 
         $response->assertStatus(200);
-        $response->assertExactJson($expectedData);
+        $response->assertExactJson(['data' => $expectedData]);
     }
 }
