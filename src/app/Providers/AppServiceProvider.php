@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Services\PlainHangar\PlainHangar;
+use App\Services\PlainHangar\PlainHangarContract;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +15,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind(
+            PlainHangarContract::class,
+            PlainHangar::class
+        );
     }
 
     /**
